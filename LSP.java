@@ -1,14 +1,14 @@
 import java.util.*;
 
 class student{
-    public void get_max_height(List<int> student_height);
-    public void get_least_height(List<int> student_height);
+    public void get_max_height(List<Integer> student_height){}
+    public void get_least_height(List<Integer> student_height){}
 }
 
 class max_height extends student
 {
-    List<int> student_height;
-    public void get_max_height(List<int> student_height)
+    List<Integer> student_height;
+    public void get_max_height(List<Integer> student_height)
     {
         this.student_height=student_height;
         int max=0;
@@ -24,8 +24,8 @@ class max_height extends student
 }
 class min_height extends student
 {
-    List<int> student_height;
-    public void get_least_height(List<int> student_height)
+    List<Integer> student_height;
+    public void get_least_height(List<Integer> student_height)
     {
         this.student_height=student_height;
         int min=0;
@@ -44,18 +44,23 @@ class min_height extends student
 
 class LSP
 {
-    public static void main(String[] args)
+
+    public void main(String[] args)
     {
         Scanner scan=new Scanner(System.in);
-        List<int> student_height= new ArrayList<int>();
+        List<Integer> student_height= new ArrayList<Integer>();
 
         while (scan.hasNextInt()) {
-            String line = scan.next();
+            Integer line = scan.nextInt();
             if (line.isEmpty()) {
                 break;
             }
             student_height.add(line);
         }
-        student_avg_height obj= new student_avg_height(List<int> student_height);
+        max_height obj1= new max_height();
+        obj1.get_max_height(student_height);
+        min_height obj2=new min_height();
+        obj2.get_least_height(student_height);
+        
     }
 }
