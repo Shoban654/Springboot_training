@@ -1,6 +1,6 @@
 import java.util.*;
 
-private class class_strength {
+class class_strength {
     class_Students class_students;
     public void class_strength(class_Students class_students)
     {
@@ -14,7 +14,7 @@ private class class_strength {
 
 
 
-public class class_Students {
+ class class_Students {
     List<String> studentlist;
     public void printnames(List<String> students_list)
     {
