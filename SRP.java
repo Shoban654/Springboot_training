@@ -1,14 +1,14 @@
 import java.util.*;
 
 class class_strength {
-    class_Students class_students;
-    public void class_strength(class_Students class_students)
+    List<String> student_names;
+    class_strength(List<String> student_names2)
     {
-        this.class_students;
+        this.student_names=student_names2;
     }
-    public static void strength_of_class()
+    public void strength_of_class()
     {
-        System.out.println(class_students.studentlist.size());
+        System.out.println(student_names.studentlist.size());
     }
 }
 
@@ -25,12 +25,13 @@ class class_strength {
 
 public class SRP{
     public static void main(String[] args) {
-        Scanner scan=new Scanner(System.in);
         List<String> student_names= new ArrayList<String>();
+        Scanner scan=new Scanner(System.in);
 
         while (scan.hasNextLine()) {
             String line = scan.next();
             if (line.isEmpty()) {
+                scan.close();
                 break;
             }
             student_names.add(line);
@@ -38,7 +39,7 @@ public class SRP{
 
         class_Students myobj= new class_Students();
         myobj.printnames(student_names);
-        class_strength obj=new  class_strength();
+        class_strength obj=new class_strength(student_names);
         obj.strength_of_class();
     }
 }
