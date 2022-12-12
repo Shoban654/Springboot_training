@@ -16,26 +16,31 @@ public class StudentsController {
     @GetMapping("/students")
     public String getstudents_strength()
     {
+        System.out.println("get compiled");
         return "student strength is 30";
     }
     @PostMapping("/students")
     public String post_studentnames()
     {
+        System.out.println("post compiled");
         return "student1 added";
     }
     @DeleteMapping("/students")
     public String delete_studentnames()
     {
+        System.out.println("delete compiled");
         return "student1 deleted";
     }
     @PutMapping("/students")
     public String add_student()
     {
+        System.out.println("put compiled");
         return "student1 edited";
     }
     @PatchMapping("/students")
     public String patch_student()
     {
+        System.out.println("patch compiled");
         return "student1 details edited";
     }
 }

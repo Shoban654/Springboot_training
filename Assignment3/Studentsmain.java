@@ -14,6 +14,9 @@ public class Studentsmain {
       StudentsController obj1= obj_getter.getBean(StudentsController.class);
       obj1.getstudents_strength();
       obj1.post_studentnames();
+      obj1.delete_studentnames();
+      obj1.add_student();
+      obj1.patch_student();
    } 
 
 }
